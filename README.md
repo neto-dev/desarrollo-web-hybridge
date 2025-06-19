@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# Arquitectura de Componentes con React 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto introduce la arquitectura basada en componentes utilizando React y Tailwind CSS, con enfoque en los principios **DRY** (_Don't Repeat Yourself_) y **KISS** (_Keep It Simple, Stupid_), para construir aplicaciones web modernas, eficientes y reutilizables.
 
-Currently, two official plugins are available:
+## 🧱 Objetivos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Comprender qué es React y su arquitectura basada en componentes.
+- Aplicar los principios DRY y KISS para escribir código limpio y mantenible.
+- Crear componentes reutilizables con props, variantes y estilos dinámicos.
 
-## Expanding the ESLint configuration
+## ⚙️ Stack Tecnológico
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) como empaquetador rápido
+- [Tailwind CSS](https://tailwindcss.com/) para estilos utilitarios
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚧 Instalación rápida
+
+```bash
+npm create vite@latest mi-app-react -- --template react-ts
+cd mi-app-react
+npm install
+npm install tailwindcss @tailwindcss/vite --save
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Configura Tailwind en `vite.config.ts` y `index.css`, luego ejecuta:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+## 🧩 Componentes
+
+Se implementa un componente `Button` con soporte para variantes:
+
+```tsx
+<Button>Primario</Button>
+<Button variant="outline">Secundario</Button>
+<Button variant="destructive">Peligro</Button>
+```
+
+Props soportadas:
+
+- `variant`: `"primary"` (por defecto), `"outline"`, `"destructive"`
+- `children`: contenido del botón
+
+## 📁 Estructura básica
+
+```
+mi-app-react/
+├── src/
+│   ├── components/
+│   │   └── Button.tsx
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── index.html
+└── vite.config.ts
+```
+
+## 💡 Principios aplicados
+
+- **DRY**: evita duplicar lógica, reutiliza funciones y componentes.
+- **KISS**: mantén el código simple, claro y directo.
+
+---
+
+> React es la librería más usada en desarrollo web. Aprender a estructurar proyectos con componentes es esencial para trabajar profesionalmente en frontend.
