@@ -1,18 +1,8 @@
-import { Button } from "./components/Button";
+import { Counter } from "./components/Counter.tsx";
 
 function App() {
   return (
-    <div>
-      <Button>
-        Botón 1
-      </Button>
-      <Button variant="outline">
-        Botón 2
-      </Button>
-      <Button variant="destructive">
-        Botón 3
-      </Button>
-    </div>
+    <Counter />
   );
 }
 
