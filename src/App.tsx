@@ -1,14 +1,15 @@
-import { Starships } from "./components/Starships.tsx";
-import {Counter} from "./components/Counter.tsx"
-import {Componente2} from "./Componente2.tsx"
+import ContextTutorial from "./components/ContextExample/ContextTutorial";
 
 function App() {
   return (
     <>
-      <Starships />
-      <Counter />
+      {/* Tutorial de Context API */}
+      <ContextTutorial />
+      
+      {/* Componentes originales */}
+      {/* <Starships />
+      <Counter /> */}
     </>
-    
   );
 }
 
