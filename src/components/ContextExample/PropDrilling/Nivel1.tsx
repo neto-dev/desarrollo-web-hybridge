@@ -1,5 +1,5 @@
 import React from 'react';
-import Nivel2 from './Nivel2';
+import Nivel2 from './Nivel2.tsx';
 
 // Componente de nivel 1 que recibe el tema y la función para cambiarlo
 // y los pasa al siguiente nivel
